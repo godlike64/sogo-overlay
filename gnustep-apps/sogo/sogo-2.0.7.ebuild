@@ -74,7 +74,8 @@ src_install() {
 }
 
 pkg_preinst() {
-	enewuser sogo -1 /bin/bash /var/lib/sogo
+	enewgroup sogo
+	enewuser sogo -1 /bin/bash /var/lib/sogo sogo
 }
 
 pkg_postinst() {
