@@ -16,12 +16,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE="postgres mysql logrotate"
 DEPEND="gnustep-libs/sope[ldap,mysql?,postgres?]
 	!mysql? ( !postgres? ( dev-db/postgresql-base ) )
+	dev-libs/libmemcached
 	net-misc/memcached
 	net-nds/openldap"
 RDEPEND="${DEPEND}
 	logrotate? ( app-admin/logrotate )"
 
-S=${WORKDIR}/${MY_PN}-${MY_PV}
+S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	gnustep-base_pkg_setup
@@ -47,10 +48,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}"
-	mv SOGo-"${PV}" "${PN}"
+	mv "SOGo-${PV}" "${PN}"
 }
 
 src_configure() {
+	cd "${S}"
 	egnustep_env
 	./configure \
 		$(use_enable debug) \
