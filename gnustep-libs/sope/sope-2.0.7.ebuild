@@ -50,6 +50,12 @@ pkg_setup() {
 	append-ldflags -Wl,--no-as-needed
 }
 
+src_unpack () {
+	unpack ${A}
+	cd "${WORKDIR}"
+	mv SOPE "${PN}"
+}
+
 src_prepare() {
 	gnustep-base_src_prepare
 }
@@ -58,7 +64,7 @@ src_configure() {
 	cd "${S}"
 	./configure \
 		$(use_enable debug) \
-		$(use_enable debug strip) \
+		--disable-strip \
 		--with-gnustep ${myconf} || die "configure failed"
 }
 
