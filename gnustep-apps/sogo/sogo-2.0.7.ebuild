@@ -63,6 +63,8 @@ src_install() {
 	gnustep-base_src_install
 	newinitd "${FILESDIR}"/sogod.initd sogod \
 		|| die "Init script installation failed"
+	newconfd "${FILESDIR}"/sogod.confd sogod \
+		|| die "Conf.d installation failed"
 	if use logrotate; then
 		insopts -m644 -o root -g root
 		insinto /etc/logrotate.d
