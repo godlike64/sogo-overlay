@@ -1,0 +1,67 @@
+# /etc/conf.d/sogod: config file for /etc/init.d/sogod
+#
+#Under which user should sogod run?
+SOGOD_USER="sogo"
+
+#Where is the sogod binary?
+SOGOD_BINARY="/usr/sbin/sogod"
+
+#Where shall we put sogod PID file?
+SOGOD_PID="/var/run/sogo/sogo.pid"
+
+
+# Options for SOGo
+SOGOD_OPTS=""
+
+# Enable all or a subset of the options below to run
+# SOGo with additional debug options
+###
+#SOGOD_OPTS="${SOGOD_OPTS} -DAVParserDebugProp YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SOGoDebugLeaks YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SOGoDebugRequests YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SOGoUIxDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoClassRegistryDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoDebugKeyLookup YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoDebugProductLoading YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoDebugProductRegistry YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoDebugRequestClassification YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoDebugTraversal YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoOFSDebugAuthLookup YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoOFSDebugFactory YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoOFSDebugNegotiate YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoOFSDebugPlistObject YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoOFSDebugRestore YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoOFSResourceManagerDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoOFSWebMethodDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoObjCClassDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoObjectDAVDispatcherDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoObjectDataSourceDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoObjectMethodDispatcherDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoObjectRequestHandlerDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoObjectSOAPDispatcherDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoObjectXmlRpcDispatcherDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoPageInvocationDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoProductResourceManagerDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoRendererDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoSecurityManagerDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugActions YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugComponentAwake YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugComponentDefinition YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugComponentLookup YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugCursor YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugHttpTransaction YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugKeyPathAssociation YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugResourceLookup YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugStaticLinkProcessing YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugTakeValues YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebugZipResponse YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WODebuggingEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WOPageRequestHandlerDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WOResourceURLAssociationDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WOSimpleHTTPParserDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WOSimpleHTTPParserHeavyDebugEnabled YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WOxComponentElemBuilderDebugEnabled YES"
+# Additional useful things for debugging
+#SOGOD_OPTS="${SOGOD_OPTS} -SoLogSecurityDeclarations YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -SoRedirectToDefaultMethods YES"
+#SOGOD_OPTS="${SOGOD_OPTS} -WOIsRedirectionEnabled YES"

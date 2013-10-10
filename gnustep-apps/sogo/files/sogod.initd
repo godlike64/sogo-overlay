@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+depend() {
+    need memcached
+}
+
+start() {
+    ebegin "Starting ${SVCNAME}"
+    start-stop-daemon --start --exec ${SOGOD_BINARY} \
+        --pidfile ${SOGOD_PID} --user ${SOGOD_USER} -- \
+        ${SOGOD_OPTS}
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping ${SVCNAME}"
+    start-stop-daemon --stop --exec ${SOGOD_BINARY} \
+        --pidfile ${SOGOD_PID} --quiet
+    eend $?
+}
